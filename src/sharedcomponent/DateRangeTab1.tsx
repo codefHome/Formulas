@@ -30,13 +30,13 @@ const DateRangeTab = () => {
   const[selectedDate,setSelectedDate]=useState<Date>(new Date())
   const handleOnClick1=()=>{
     if (datePickerRef.current) {
-      datePickerRef.current.input.focus();
+      datePickerRef.current.setFocus();
     }
     
   }
   const handleOnClick2=()=>{
     if (datePickerRef.current) {
-      datePickerRef.current.input.focus();
+      datePickerRef.current.setFocus();
     }
   }
   const handleDateChange = (date:Date | null) => {
@@ -118,8 +118,7 @@ const DateRangeTab = () => {
           selected={selectedDate}
           onChange={handleDateChange}
           dateFormat="MMMM yyyy"
-          showMonthYearPicker
-          position='top'
+              showMonthYearPicker
         />
          </span>
           
