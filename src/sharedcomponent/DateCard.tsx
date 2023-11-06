@@ -5,34 +5,18 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Box, IconButton, } from "@mui/material";
-import { createStyles, makeStyles } from '@mui/styles';
 import InfoIcon from '@mui/icons-material/Info';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { ReactNode, useRef, useState } from "react";
 import DatePicker,{ReactDatePicker } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-        '& .MuiInputBase-input': {
-          height: '35px',
-          padding: '0',
-          fontSize: '15px'
-        }
-      }
-  }),
-);
-
 interface InputCardProps{
   icon1:ReactNode
   title:string
   icon2:ReactNode
 }
- const InputCard=({icon1,icon2,title}:InputCardProps) =>{
-    // const classes = useStyles();
+const InputCard = ({ icon1, icon2, title }: InputCardProps) => {
     const datePickerRef = useRef<ReactDatePicker>(null);
 
     const[selectedDate,setSelectedDate]=useState<Date>(new Date())

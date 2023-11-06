@@ -12,8 +12,7 @@ import { ChangeEvent, ReactNode, useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import makeStyles from "@mui/styles/makeStyles/makeStyles";
 import createStyles from "@mui/styles/createStyles";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const useStyles = makeStyles((theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
         '& .MuiInputBase-input': {
