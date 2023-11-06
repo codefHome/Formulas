@@ -5,11 +5,13 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Box, Button, IconButton, InputAdornment, Popover, TextField } from "@mui/material";
-import { createStyles, makeStyles } from '@mui/styles';
+
 import InfoIcon from '@mui/icons-material/Info';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { ChangeEvent, ReactNode, useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
+import makeStyles from "@mui/styles/makeStyles/makeStyles";
+import createStyles from "@mui/styles/createStyles";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const useStyles = makeStyles((theme) =>
   createStyles({
