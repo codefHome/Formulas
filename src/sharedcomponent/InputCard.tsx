@@ -1,8 +1,4 @@
 
-
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Box, Button, IconButton, InputAdornment, Popover, TextField } from "@mui/material";
 
@@ -10,27 +6,13 @@ import InfoIcon from '@mui/icons-material/Info';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { ChangeEvent, ReactNode, useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
-import makeStyles from "@mui/styles/makeStyles/makeStyles";
-import createStyles from "@mui/styles/createStyles";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-        '& .MuiInputBase-input': {
-          height: '35px',
-          padding: '0',
-          fontSize: '15px'
-        }
-      }
-  }),
-);
+
 
 interface InputCardProps{
   icon:ReactNode
   title:string
 }
- const InputCard=({icon,title}:InputCardProps) =>{
-    const classes = useStyles();
+const InputCard = ({ icon, title }: InputCardProps) => {
     const[value,setValue]=useState<number>(0)
    const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -46,8 +28,8 @@ interface InputCardProps{
    const id = open ? 'simple-popover' : undefined;
 
   return (
-    <Card sx={{ maxWidth: "100%",marginBottom:'15px' }}>
-      <CardContent
+    <Box sx={{ width: "100%", marginBottom: '15px' }}>
+      <Box
         sx={{
           width: "100%",
           padding: "0px",
@@ -68,7 +50,7 @@ interface InputCardProps{
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
            {title}
           </Typography>
-          <CardActions >
+          <Box >
             
             <IconButton onClick={handleClick} sx={{ padding: 0 }}><InfoIcon sx={{ width: '15px', height: '15px' }} /></IconButton>
             <Popover
@@ -92,7 +74,7 @@ interface InputCardProps{
 
             </Popover>
            <IconButton sx={{padding:0}}><MoreHorizIcon sx={{width:'25px',height:'25px'}}/></IconButton>
-          </CardActions>
+          </Box>
         </Box>
         <Box sx={{
             marginTop:'10px',
@@ -101,10 +83,7 @@ interface InputCardProps{
             marginBottom:'0px'
 
         }}>
-        <TextField classes={{
-          
-          root: classes.root,
-        }} 
+          <TextField
         fullWidth
         InputProps={{
           startAdornment: <InputAdornment position="start">{icon}</InputAdornment>,
@@ -115,8 +94,8 @@ interface InputCardProps{
        />
         </Box>
        
-      </CardContent>
-    </Card>
+      </Box>
+    </Box>
   );
 }
 

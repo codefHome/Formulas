@@ -1,28 +1,27 @@
-import {IconButton } from "@mui/material"
-import { styled } from '@mui/material/styles';
+import { IconButton } from "@mui/material"
 import AddIcon from '@mui/icons-material/Add';
 IconButton
 interface PlusButtonProps{
     onClick: ()=>void;
 
 }
-const RectIconButton = styled(IconButton)({
-    borderRadius: '5px',
-    width: '25px',
-    height: '25px',
-    backgroundColor: 'blue',
-    color: 'white',
-    padding:'2px'
-  });
-  const PlusButton=({onClick}:PlusButtonProps)=>{
-    return(
-        <RectIconButton 
+
+const PlusButton = ({ onClick }: PlusButtonProps) => {
+    return (
+        <IconButton sx={{
+            borderRadius: '5px',
+            width: '25px',
+            height: '25px',
+            backgroundColor: 'blue',
+            color: 'white',
+            padding: '2px'
+        }} 
         
         onClick={onClick}
        
         >
 <AddIcon/>
-        </RectIconButton>
+        </IconButton>
     )
 }
 export default PlusButton

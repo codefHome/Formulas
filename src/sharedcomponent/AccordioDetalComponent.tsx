@@ -9,9 +9,6 @@ import AddIcon from '@mui/icons-material/Add';
 import InputField from './InputField';
 import { useFieldArray, useForm } from 'react-hook-form';
 import DropDownPanel from './DropDownPanel';
-// interface AccordionDetailProps{
-//     handleDateRange:()=>void
-// }
 const AccordioDetalComponent = () => {
     const { control } = useForm();
   const { fields, append,remove } = useFieldArray({

@@ -1,7 +1,7 @@
 
 import FormulaHead from '../sharedcomponent/FormulaHead'
 import { UploadIcon } from '../assets/icons/uploadIcon'
-import { Box, Card, CardActions, CardContent, IconButton, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material'
+import { Box, IconButton, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { useState } from 'react';
 import SquareRootIcon from '../assets/icons/SquareRootIcon';
@@ -45,8 +45,8 @@ const FormulaOutputs = () => {
       handleOnClick={handleOnClick}
        />
        <div className="flex flex-col px-6 w-full mt-[20px]">
-       <Card sx={{ maxWidth: "100%",marginBottom:'15px' }}>
-      <CardContent
+        <Box sx={{ maxWidth: "100%", marginBottom: '15px' }}>
+          <Box
         sx={{
           width: "100%",
           padding: "0px",
@@ -67,9 +67,9 @@ const FormulaOutputs = () => {
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Principal Payment
           </Typography>
-          <CardActions >
+              <Box >
            <IconButton sx={{padding:0}}><MoreHorizIcon sx={{width:'25px',height:'25px'}}/></IconButton>
-          </CardActions>
+              </Box>
         </Box>
         <Box sx={{
             marginTop:'10px',
@@ -121,8 +121,8 @@ const FormulaOutputs = () => {
        
         </Box>
        
-      </CardContent>
-    </Card>
+          </Box>
+        </Box>
 
        </div>
 
