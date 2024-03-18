@@ -19,7 +19,7 @@ const DateRangeTab = () => {
     };
   };
 
-  const handleChange = (event: SyntheticEvent, newValue: number) => {
+  const handleChange = (_: SyntheticEvent, newValue: number) => {
     setValue(newValue);
     
     

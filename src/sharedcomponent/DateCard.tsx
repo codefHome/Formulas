@@ -7,7 +7,6 @@ import { ReactNode, useRef, useState } from "react";
 import DatePicker,{ReactDatePicker } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-
 interface InputCardProps{
   icon1:ReactNode
   title:string

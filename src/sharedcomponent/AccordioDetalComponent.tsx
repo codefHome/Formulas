@@ -30,7 +30,7 @@ const AccordioDetalComponent = () => {
 
   return (
    <>
-    {fields.map((item, index) => {
+      {fields.map((_, index) => {
         return (
         <div className="flex w-full">
     <div className="mt-3">
