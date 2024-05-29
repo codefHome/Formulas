@@ -1,14 +1,16 @@
 
 
-import './App.css'
 
-import Formulas from './pages/Formulas'
+import './App.css'
+import Dashboard from './pages/Dashboard'
+
+
 
 function App() {
 
   return (
     <div className="bg-[#F6F8FA]">
-  <Formulas/>
+<Dashboard/>
     </div>
     
   
